@@ -21,23 +21,23 @@ public class contentCreator {
     
     String[] Group1 = {"will", "should", "might", "could"};
 
-    String[] Group2 = {"was", "is", "will be"};
+    String[] Group2 = {"all in all, a good day for", "all in all, a bad day for"};
 
-    String[] Group3 = {"were", "are", "will be"};
+    String[] Group3 = {"memories", "consequences", "results"};
 
     String[] Group4 = {"no", "some", "a little bit of", "more"};
     
     String[] Group5 = {"organised plans", "work", "keeping the busy times to minimum", "fun", "productivity", "procrastination", "rest", "relaxation"};
 
-    String[] Group6 = {"must", "can't", "can", "must not", "should", "couldn't", "shouldn't"};
+    String[] Group6 = {"positive", "negative", "good", "bad", "happy", "sad", "torturous", "wonderful", "exciting"};
 
-    String[] Group7 = {"procrastinate", "work", "clean", "rest", "sleep", "visit family or friends"};
+    String[] Group7 = {"provoke", "cause", "lead", "evoke", "summon"};
+
+    String[] Group8 = {"they"};
     
-    String[] Group8 = {"wants", "needs", "allows", "helps"};
-    
-    String[] Group9 = {"you"};
-    
-    String[] Group10 = {"to"};
+    String[] Group9 = {"of"};
+
+    String[] Group10 = {"aware", "careful", "cautious"};
     
     String[] Group11 = {"more", "less", "more often", "less often", "regularly", "once a week", "only a little bit everyday", "a little bit", "a lot"};
     
@@ -48,8 +48,8 @@ public class contentCreator {
     String[] Group14 = {"find yourself"};
     
     String[] Group15 = {"procrastinating", "working", "sleeping", "resting", "having free time", "enjoying yourself", "learning something new"};
-    
-    String[] Group16 = {"for"};
+
+    String[] Group16 = {"be"};
     
     String[] Group17 = {"can"};
     
@@ -67,21 +67,6 @@ public class contentCreator {
 
     String[] Group24 = {"positively", "negatively", "in a good way", "in a bad way"};
 
-    String[] Group25 = {"be"};
-
-    String[] Group26 = {"aware", "careful", "cautious"};
-    
-    String[] Group27 = {"of"};
-
-    String[] Group28 = {"they"};
-
-    String[] Group29 = {"provoke", "cause", "lead", "evoke", "summon"};
-
-    String[] Group30 = {"positive", "negative", "good", "bad", "happy", "sad", "torturous", "wonderful", "exciting"};
-
-    String[] Group31 = {"memories", "consequences", "results"};
-
-    String[] Group32 = {"all in all, a good day for", "all in all, a bad day for"};
 
     //Provided with a String array, returns a random String out of the array
     String getRandomWord(String[] array){
@@ -98,13 +83,13 @@ public class contentCreator {
                 if (whichSentence == 2){
                     return planets;
                 } else {
-                    return Group25;
+                    return Group16;
                 }
             case 2:
                 if (whichSentence == 1){
                     return Group1;
                 } else if (whichSentence == 3){
-                    return Group26;
+                    return Group10;
                 } else {
                     return Group17;
                 }
@@ -112,7 +97,7 @@ public class contentCreator {
                 if (whichSentence == 1){
                     return Group14;
                 } else if (whichSentence == 3){
-                    return Group27;
+                    return Group9;
                 } else {
                     return Group18;
                 }
@@ -136,7 +121,7 @@ public class contentCreator {
                 if (whichSentence == 1){
                     return Group12;
                 } else if (whichSentence == 3){
-                    return Group28;
+                    return Group8;
                 } else {
                     return Group5;
                 }
@@ -152,7 +137,7 @@ public class contentCreator {
                 if (whichSentence == 1){
                     return Group4;
                 } else if (whichSentence == 3){
-                    return Group29;
+                    return Group7;
                 } else {
                     return Group22;
                 }
@@ -164,19 +149,19 @@ public class contentCreator {
                 }
             case 10:
                 if (whichSentence == 3){
-                    return Group30;
+                    return Group6;
                 } else {
                     return Group1;
                 }
             case 11:
                 if (whichSentence == 3){
-                    return Group31;
+                    return Group3;
                 } else {
                     return Group23;
                 }
             case 12:
                 if (whichSentence == 3){
-                    return Group32;
+                    return Group2;
                 } else {
                     return Group24;
                 }
