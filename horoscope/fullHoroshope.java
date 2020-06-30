@@ -1,14 +1,14 @@
 package horoscope;
 import java.util.ArrayList;
 
+/*The class consists of three methods building the three sentences,
+one for each differently built sentence - they are build in a form of
+adding words to an arrayList, which then in the fourth and last method
+are transformed into actual words.*/
+
 public class fullHoroshope {
 
     contentCreator cc = new contentCreator();
-
-    int numberOfSentences = 3;
-    int numberOfCompletedSentences = 0;
-
-
 
     /*Creates an arrayList with random words from each group
     that are necessary to build the sentence.*/
@@ -30,20 +30,18 @@ public class fullHoroshope {
         }
 
         /*When all words chosen, the number of completed sentences
-        is increased by 1, so is the sentence for contentCreator
-        to focus on, and the sentence is returned.*/
-        numberOfCompletedSentences++;
+        is increased by 1, that is the sentence for contentCreator
+        to focus on, and the sentence is then returned.*/
         cc.whichSentence++;
         return sentenceOne;
     }
 
     /*The same idea follows for both the second and third sentence.
-    Although they don't start with a specific word.*/
+    Although, they don't start with a specific word.*/
     ArrayList<String> secondSentence(){
         int totalWords = 12;
         int numberOfWords;
 
-        /*An array list to consist of the words for this sentence.*/
         ArrayList<String> sentenceTwo = new ArrayList<String>();
 
         for (numberOfWords = 0; numberOfWords < totalWords; numberOfWords++){
@@ -51,33 +49,38 @@ public class fullHoroshope {
             sentenceTwo.add(word);
         }
         
-        numberOfCompletedSentences++;
         cc.whichSentence++;
         return sentenceTwo;
     }
 
-    ArrayList<String> thirdSentence(){
-        int totalWords = 15;
+    ArrayList<String> thirdSentence(String sign){
+        int totalWords = 12;
         int numberOfWords;
 
-        /*An array list to consist of the words for this sentence.*/
         ArrayList<String> sentenceThree = new ArrayList<String>();
 
         for (numberOfWords = 0; numberOfWords < totalWords; numberOfWords++){
             String word = cc.getRandomWord(cc.accessGroup(sentenceThree.size()+1));            
+            
+            /*Adding punctuation at required moments.*/
             if (numberOfWords == 4){
                 word = word + ",";
             }
+
+            if (numberOfWords == 10){
+                word = word + ";";
+            }
+
             sentenceThree.add(word);
         }
 
-        
-        numberOfCompletedSentences++;
+        sentenceThree.add(sign);
+
         cc.whichSentence++;
         return sentenceThree;
     }
 
-    /*Uses an array of words to use in a sentence and transforms it into a sentence
+    /*Uses an arrayList of words to use in a sentence and transforms it into a sentence
     a proper sentence.*/
     String makeSentence(ArrayList<String> sentence) {
         String sent = "";
@@ -108,6 +111,5 @@ public class fullHoroshope {
 
         return sent;
     }
-
 
 }

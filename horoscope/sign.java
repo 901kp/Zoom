@@ -1,18 +1,24 @@
 package horoscope;
 import java.util.Scanner;
 
+/* The getSign() method asks the user to input their star sign, then
+in the checkSign() method checks for correct spelling on the assumption
+that the first 2 characters are the most likely to be correct.
+(If the word that is to be the star sign is unrecognizable, 
+the correction process is given up on.)*/
+
 public class sign {
-    public static String sign = "STH";
+    String sign;
 
     /*Get a the star sign from the user to use in producing a horoscope.*/
     public String getSign() {
-/*
+
         Scanner scan = new Scanner(System.in);
-        System.out.println("Please, input your star sign.");
+        System.out.println("Please, input your star sign:");
         sign = scan.nextLine();
         sign = checkSign(sign);
         scan.close();
-*/
+
         return sign;
     }
 
