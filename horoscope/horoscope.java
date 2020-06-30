@@ -11,7 +11,9 @@ public class horoscope {
 
         System.out.println("Star sign is " + starSign + ".");
 
-        System.out.println(hor.makeSentence(hor.firstSentence()));
+        System.out.print(hor.makeSentence(hor.firstSentence()));
+        System.out.print(hor.makeSentence(hor.secondSentence()));
+        System.out.println(hor.makeSentence(hor.thirdSentence()));
 
     }
 }

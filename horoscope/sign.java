@@ -54,7 +54,8 @@ public class sign {
                         return "Capricorn";
                 };
 
-            //if we still don't know what it is, let's just make do
+            /*If we still don't know what it is, let's just make do with
+            what we've got.*/
             default:
                 String weirdSign = sign;
                 weirdSign = sign.substring(0, 1).toUpperCase() + sign.substring(1);
